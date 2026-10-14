@@ -29,7 +29,7 @@ class _MyPageState extends State<MyPage> {
                   message = '15151515';
                 });
               },
-              child: const Text('Haaaaa),
+              child: const Text('Haaaaa'),
             ),
           ],
         ),
