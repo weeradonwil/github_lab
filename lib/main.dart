@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
- 
+
+import 'profile_page.dart';
+
 void main() {
   runApp(const MaterialApp(home: MyPage()));
 }
- 
+
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
- 
+
   @override
   State<MyPage> createState() => _MyPageState();
 }
- 
+
 class _MyPageState extends State<MyPage> {
   String message = 'ยังไม่ได้กดปุ่ม  หรอจ๊ะ';
- 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +30,13 @@ class _MyPageState extends State<MyPage> {
                 setState(() {
                   message = 'กดปุ่มแล้ว!';
                 });
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const ProfilePage(),
+                  ),
+                );
               },
-              child: const Text('หมาน้อย เหมี๊ยวๆ'),
+              child: const Text('ไปหน้า Profile'),
             ),
           ],
         ),
